@@ -1,0 +1,41 @@
+{
+  "name": "game-academy",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@emailjs/react-native": "^4.2.2",
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "@react-native-community/datetimepicker": "8.0.1",
+    "@react-native-community/netinfo": "11.3.1",
+    "@react-native-picker/picker": "2.7.5",
+    "@react-navigation/material-top-tabs": "^6.6.13",
+    "@react-navigation/native": "^6.1.14",
+    "@react-navigation/stack": "^6.3.25",
+    "axios": "^1.6.7",
+    "expo": "^51.0.14",
+    "expo-av": "~14.0.7",
+    "expo-sharing": "^12.0.1",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-feather": "^1.1.2",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-pager-view": "6.3.0",
+    "react-native-paper": "^5.12.3",
+    "react-native-progress": "^5.0.1",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-safe-area-view": "^1.1.1",
+    "react-native-tab-view": "^3.5.2",
+    "react-native-webview": "13.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
