@@ -61,7 +61,6 @@ DB_PASSWORD=******
 
 ### Executando o Back-end
 ```sh
-cd Api
 npm install
 node index.js
 ```
