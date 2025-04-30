@@ -61,7 +61,7 @@ const NovoConteudo: React.FC<Props> = ({ navigation, route }) => {
           onPress: async () => {
             try {
               const response = await axios.post(
-                `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/conteudos`,
+                `http://localhost:3000/conteudos`,
                 {
                   tipo: tipo.substring(0, 50),
                   texto,

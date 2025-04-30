@@ -5,7 +5,7 @@ import { RootStackParamList } from "../types/navigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 const API_URL =
-  "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app";
+  "http://localhost:3000";
 
 const api = axios.create({
   baseURL: API_URL,

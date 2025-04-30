@@ -34,7 +34,7 @@ const Opcoes: React.FC<Props> = ({ navigation }) => {
         }
 
         const response = await axios.get(
-          "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/perfil",
+          "http://localhost:3000/perfil",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -156,7 +156,7 @@ Para dúvidas, entre em contato através do suporte no aplicativo.`;
       }
 
       await axios.delete(
-        `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/usuarios/${userId}`,
+        `http://localhost:3000/usuarios/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

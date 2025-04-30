@@ -53,7 +53,7 @@ const ConteudoDetalhe: React.FC<Props> = ({ navigation, route }) => {
         }
 
         const response = await axios.get<PerfilResponse>(
-          "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/perfil",
+          "http://localhost:3000/perfil",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ const ConteudoDetalhe: React.FC<Props> = ({ navigation, route }) => {
         }
 
         const response = await axios.get<Conteudo>(
-          `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/conteudos/${route.params.conteudoId}`,
+          `http://localhost:3000/conteudos/${route.params.conteudoId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

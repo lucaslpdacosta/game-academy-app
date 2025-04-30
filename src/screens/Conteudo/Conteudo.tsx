@@ -63,7 +63,7 @@ const Conteudo: React.FC<Props> = ({ navigation, route }) => {
         }
 
         const response = await axios.get<PerfilResponse>(
-          "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/perfil",
+          "http://localhost:3000/perfil",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ const Conteudo: React.FC<Props> = ({ navigation, route }) => {
         }
 
         const infoUsuario = await axios.get<PerfilResponse>(
-          "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/perfil",
+          "http://localhost:3000/perfil",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -103,7 +103,7 @@ const Conteudo: React.FC<Props> = ({ navigation, route }) => {
 
         const [dadosConteudo, dadosPontuacao] = await Promise.all([
           axios.get<ConteudoResponse[]>(
-            `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/conteudos/modulo/${route.params.moduloId}`,
+            `http://localhost:3000/conteudos/modulo/${route.params.moduloId}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -111,7 +111,7 @@ const Conteudo: React.FC<Props> = ({ navigation, route }) => {
             }
           ),
           axios.get<PontuacaoResponse[]>(
-            `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/pontuacoes/modulo/${route.params.moduloId}/usuario/${usuarioId}`,
+            `http://localhost:3000/pontuacoes/modulo/${route.params.moduloId}/usuario/${usuarioId}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -127,7 +127,7 @@ const Conteudo: React.FC<Props> = ({ navigation, route }) => {
           pegarCont.map(async (conteudo) => {
             try {
               const testesResponse = await axios.get(
-                `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/testes/${route.params.moduloId}/${conteudo.id}`
+                `http://localhost:3000/testes/${route.params.moduloId}/${conteudo.id}`
               );
               const numTestes = testesResponse.data.length;
               return { ...conteudo, numTestes };

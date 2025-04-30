@@ -50,7 +50,7 @@ const Teste: React.FC<Props> = ({ navigation, route }) => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/testes/${ModuloId}/${conteudoId}`
+          `http://localhost:3000/testes/${ModuloId}/${conteudoId}`
         );
         if (!Array.isArray(response.data)) {
           Alert.alert("Erro", "Formato de dados inválido do servidor.");
@@ -144,7 +144,7 @@ const Teste: React.FC<Props> = ({ navigation, route }) => {
       if (!token) return;
 
       const perfilResponse = await axios.get(
-        "https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/perfil",
+        "http://localhost:3000/perfil",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -154,7 +154,7 @@ const Teste: React.FC<Props> = ({ navigation, route }) => {
       const UsuarioId = perfilResponse.data.userId;
 
       const conteudoResponse = await axios.get(
-        `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/conteudos/modulo/${ModuloId}`,
+        `http://localhost:3000/conteudos/modulo/${ModuloId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -167,7 +167,7 @@ const Teste: React.FC<Props> = ({ navigation, route }) => {
       const pontos = conteudo.pontos;
 
       await axios.post(
-        `https://8cf2-2804-58f0-8006-d900-9891-65f-b337-1ade.ngrok-free.app/pontuacoes/${UsuarioId}/${ModuloId}/${conteudoId}`,
+        `http://localhost:3000/pontuacoes/${UsuarioId}/${ModuloId}/${conteudoId}`,
         {
           valor: pontos,
         },
